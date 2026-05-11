@@ -8,7 +8,7 @@ function CartItem() {
   const { cartItems, totalQuantity, totalAmount } = useSelector((state) => state.cart);
 
   const handleCheckout = () => {
-    alert('🛒 Checkout Coming Soon!\n\nWe\'re working hard to bring you a seamless checkout experience. Stay tuned!');
+    alert('Coming Soon');
   };
 
   if (cartItems.length === 0) {

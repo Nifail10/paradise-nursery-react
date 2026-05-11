@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 function CartItem() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { cartItems, quantity, totalAmount } = useSelector((state) => state.cart);
+  const { cartItems, totalQuantity, totalAmount } = useSelector((state) => state.cart);
 
   const handleCheckout = () => {
-    alert('🛒 Checkout Coming Soon!\n\nWe\'re working hard to bring you a seamless checkout experience. Stay tuned!');
+    alert('Coming Soon');
   };
 
   if (cartItems.length === 0) {
@@ -38,7 +38,7 @@ function CartItem() {
       <div className="cart-header">
         <h1 id="cart-page-title">Shopping Cart</h1>
         <p className="cart-summary-text">
-          {quantity} {quantity === 1 ? 'item' : 'items'} in your cart
+          {totalQuantity} {totalQuantity === 1 ? 'item' : 'items'} in your cart
         </p>
       </div>
 
@@ -103,7 +103,7 @@ function CartItem() {
             <h2 className="summary-title">Order Summary</h2>
             <div className="summary-row">
               <span>Total Items</span>
-              <span>{quantity}</span>
+              <span>{totalQuantity}</span>
             </div>
             <div className="summary-divider"></div>
             <div className="summary-row summary-total">
