@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
-  const cartQuantity = useSelector((state) => state.cart.quantity);
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
   const location = useLocation();
 
   return (

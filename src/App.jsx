@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import ProductList from './pages/ProductList';
-import CartItem from './pages/CartItem';
+import ProductList from './components/ProductList';
+import CartItem from './components/CartItem';
 import AboutUs from './components/AboutUs';
 import Navbar from './components/Navbar';
 import './App.css';
